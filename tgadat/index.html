@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaGenius - Генератор мета-тегов и аудит страниц</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Главная страница -->
+    <div id="home-page">
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <a href="#" class="logo">MetaGenius</a>
+                    <ul class="nav-links">
+                        <li><a href="#features">Возможности</a></li>
+                        <li><a href="#example">Пример</a></li>
+                        <li><a href="#" id="login-btn" class="btn btn-outline">Войти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <h1>Улучшите SEO вашего сайта</h1>
+                <p>MetaGenius - это мощный инструмент для генерации мета-тегов и проведения аудита веб-страниц. Повысьте видимость вашего сайта в поисковых системах.</p>
+                <a href="#" id="get-started-btn" class="btn">Начать сейчас</a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Наши возможности</h2>
+                    <p>MetaGenius предлагает полный набор инструментов для оптимизации вашего сайта</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Аудит страниц</h3>
+                        <p>Полный анализ вашего сайта на соответствие SEO-требованиям. Выявление проблем и рекомендации по их устранению.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Генерация мета-тегов</h3>
+                        <p>Автоматическое создание оптимизированных мета-тегов для повышения рейтинга в поисковых системах.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Детальная аналитика</h3>
+                        <p>Подробные отчеты о производительности вашего сайта с визуализацией данных и рекомендациями.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Совместная работа</h3>
+                        <p>Работайте над проектами вместе с командой, делитесь результатами и обсуждайте улучшения.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="example" class="example">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Пример отчета аудита</h2>
+                    <p>Посмотрите, как выглядит детальный анализ вашего сайта</p>
+                </div>
+                <div class="example-content">
+                    <div class="example-text">
+                        <h3>Что вы получите после аудита</h3>
+                        <p>Наш инструмент проводит комплексный анализ вашего сайта и предоставляет детальный отчет, включающий:</p>
+                        <ul>
+                            <li>Оценку SEO-оптимизации</li>
+                            <li>Анализ мета-тегов и структуры страницы</li>
+                            <li>Проверку скорости загрузки</li>
+                            <li>Рекомендации по улучшению</li>
+                            <li>Сравнение с конкурентами</li>
+                        </ul>
+                        <p>Все результаты сохраняются в вашем аккаунте для последующего отслеживания прогресса.</p>
+                    </div>
+                    <div class="example-visual">
+                        <h3>Отчет аудита для example.com</h3>
+                        <div class="audit-score">82/100</div>
+                        <div class="result-category">
+                            <h4>Мета-теги</h4>
+                            <div class="result-item">
+                                <span>Title тег</span>
+                                <span class="result-status status-success">Оптимизирован</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Meta description</span>
+                                <span class="result-status status-warning">Требует улучшения</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Open Graph теги</span>
+                                <span class="result-status status-error">Отсутствуют</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>MetaGenius</h3>
+                        <p>Улучшите видимость вашего сайта в поисковых системах с помощью нашего комплексного инструмента для SEO-аудита и генерации мета-тегов.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Навигация</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#features">Возможности</a></li>
+                            <li><a href="#example">Пример</a></li>
+                            <li><a href="#">Цены</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Поддержка</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Помощь</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Сообщить о проблеме</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2023 MetaGenius. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальное окно входа -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Вход в аккаунт</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Войти</button>
+            </form>
+            <div class="auth-switch">
+                <p>Нет аккаунта? <a id="switch-to-register">Зарегистрироваться</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно регистрации -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Регистрация</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">Имя пользователя</label>
+                    <input type="text" id="register-username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Пароль</label>
+                    <input type="password" id="register-password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Зарегистрироваться</button>
+            </form>
+            <div class="auth-switch">
+                <p>Уже есть аккаунт? <a id="switch-to-login">Войти</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно создания группы -->
+    <div id="create-group-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Создать группу проектов</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="create-group-form">
+                <div class="form-group">
+                    <label for="group-name">Название группы</label>
+                    <input type="text" id="group-name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="group-description">Описание группы (необязательно)</label>
+                    <textarea id="group-description" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn">Создать группу</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно создания темы -->
+    <div id="create-topic-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Создать тему на форуме</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="create-topic-form">
+                <div class="form-group">
+                    <label for="topic-title">Заголовок темы</label>
+                    <input type="text" id="topic-title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="topic-content">Содержание темы</label>
+                    <textarea id="topic-content" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn">Создать тему</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Панель пользователя -->
+    <div id="user-dashboard" class="dashboard">
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-nav">
+                    <a href="#" class="logo">MetaGenius</a>
+                    <div class="user-info">
+                        <!-- Кнопка переключения темы -->
+                        <button class="theme-toggle" id="theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        
+                        <!-- Уведомления -->
+                        <div class="notification-bell" id="notification-bell">
+                            <i class="far fa-bell"></i>
+                            <span class="notification-count" id="notification-count">0</span>
+                            <div class="notifications-panel" id="notifications-panel">
+                                <!-- Уведомления будут загружаться динамически -->
+                            </div>
+                        </div>
+                        
+                        <div class="user-avatar" id="user-avatar">U</div>
+                        <span id="username-display">Пользователь</span>
+                        <!-- Рейтинг пользователя -->
+                        <div class="user-rating">
+                            <span class="rating-stars">★★★★★</span>
+                            <span id="user-rating-value">5.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-main">
+            <div class="sidebar">
+                <ul class="sidebar-nav">
+                    <li><a href="#" class="nav-dashboard active">Главная</a></li>
+                    <li><a href="#" class="nav-tags">Теги</a></li>
+                    <li><a href="#" class="nav-audit">Аудит</a></li>
+                    <li><a href="#" class="nav-forum">Форум</a></li>
+                    <li><a href="#" class="nav-support">Поддержка</a></li>
+                    <li><a href="#" class="nav-settings">Настройки</a></li>
+                    <li><a href="#" id="logout-btn">Выйти</a></li>
+                </ul>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- Главная страница пользователя -->
+                <div id="user-home-content" class="dashboard-section">
+                    <div class="content-header">
+                        <h2>Мои проекты</h2>
+                        <div class="search-box">
+                            <input type="text" id="project-search" placeholder="Поиск проекта...">
+                            <button id="search-btn">🔍</button>
+                        </div>
+                    </div>
+
+                    <!-- Статистика пользователя -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Всего проектов</h3>
+                            <div class="stat-value" id="total-projects">0</div>
+                            <p>За все время</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Аудитов проведено</h3>
+                            <div class="stat-value" id="total-audits">0</div>
+                            <p>За последний месяц</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Средний балл</h3>
+                            <div class="stat-value" id="avg-score">0</div>
+                            <p>По всем проектам</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Рейтинг</h3>
+                            <div class="stat-value" id="user-rank">0</div>
+                            <p>Среди пользователей</p>
+                        </div>
+                    </div>
+
+                    <!-- Группы проектов -->
+                    <div class="project-groups">
+                        <div class="content-header">
+                            <h2>Группы проектов</h2>
+                            <button class="btn" id="create-group-btn">Создать группу</button>
+                        </div>
+                        <div id="groups-container">
+                            <!-- Группы будут загружаться динамически -->
+                        </div>
+                    </div>
+
+                    <!-- Проекты -->
+                    <div id="projects-container" class="projects-grid">
+                        <!-- Проекты будут загружаться динамически -->
+                    </div>
+                </div>
+                <div id="tags-content" class="dashboard-section" style="display: none;">
+                    <h2>Генератор мета-тегов</h2>
+                    <p>Заполните форму для создания оптимизированных мета-тегов для вашего сайта.</p>
+                    
+                    <div class="tags-form">
+                        <div class="form-group">
+                            <label for="tag-title">Заголовок страницы (Title)</label>
+                            <input type="text" id="tag-title" class="form-control" placeholder="Введите заголовок страницы">
+                        </div>
+                        <div class="form-group">
+                            <label for="tag-description">Описание страницы (Description)</label>
+                            <textarea id="tag-description" class="form-control" placeholder="Введите описание страницы"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="tag-keywords">Ключевые слова (Keywords)</label>
+                            <input type="text" id="tag-keywords" class="form-control" placeholder="Введите ключевые слова через запятую">
+                        </div>
+                        <div class="form-group">
+                            <label for="tag-author">Автор</label>
+                            <input type="text" id="tag-author" class="form-control" placeholder="Введите имя автора">
+                        </div>
+                        <div class="form-group">
+                            <label for="tag-url">URL страницы</label>
+                            <input type="url" id="tag-url" class="form-control" placeholder="https://example.com/page">
+                        </div>
+                        <div class="form-group">
+                            <label for="tag-image">Изображение для соцсетей (URL)</label>
+                            <input type="url" id="tag-image" class="form-control" placeholder="https://example.com/image.jpg">
+                        </div>
+                        <div class="form-group">
+                            <label for="tag-site-name">Название сайта</label>
+                            <input type="text" id="tag-site-name" class="form-control" placeholder="Введите название сайта">
+                        </div>
+                        
+                        <button id="generate-tags-btn" class="btn">Сгенерировать теги</button>
+                    </div>
+                    
+                    <div id="tags-preview" class="tags-preview">
+                        <h3>Результат</h3>
+                        <p>Скопируйте сгенерированные теги и добавьте их в раздел &lt;head&gt; вашего HTML-документа.</p>
+                        
+                        <div id="tags-code" class="tags-code">
+                            <!-- Сгенерированные теги будут здесь -->
+                        </div>
+                        
+                        <div class="tags-actions">
+                            <button id="copy-tags-btn" class="btn btn-outline">
+                                <i class="fas fa-copy"></i> Копировать
+                            </button>
+                            <button id="download-tags-btn" class="btn btn-outline">
+                                <i class="fas fa-download"></i> Скачать TXT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Страница аудита -->
+                <div id="audit-content" class="dashboard-section" style="display: none;">
+                    <h2>Аудит сайта</h2>
+                    <div class="audit-form">
+                        <div class="form-group">
+                            <label for="audit-url">URL сайта</label>
+                            <input type="url" id="audit-url" class="form-control" placeholder="https://example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-autocomplete">Выберите или создайте проект</label>
+                            <input type="text" id="project-autocomplete" class="form-control" 
+                                   placeholder="Начните вводить название проекта..." 
+                                   list="project-suggestions">
+                            <datalist id="project-suggestions">
+                                <!-- Предложения будут добавляться динамически -->
+                            </datalist>
+                            <div id="autocomplete-suggestions" class="autocomplete-suggestions" style="display: none;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-group-select">Группа проекта</label>
+                            <select id="project-group-select" class="form-control">
+                                <option value="">Без группы</option>
+                            </select>
+                        </div>
+                        <button id="start-audit-btn" class="btn">Начать аудит</button>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress" id="audit-progress"></div>
+                    </div>
+
+                    <div id="audit-results-detail" class="audit-results-detail">
+                        <div class="content-header">
+                            <h2>Результаты аудита</h2>
+                            <div class="export-options">
+                                <button class="btn btn-outline" id="export-pdf-btn">
+                                    <i class="fas fa-file-pdf"></i> PDF
+                                </button>
+                                <button class="btn btn-outline" id="export-csv-btn">
+                                    <i class="fas fa-file-csv"></i> CSV
+                                </button>
+                            </div>
+                        </div>
+                        <div id="audit-results-content">
+                            <!-- Результаты аудита будут загружаться динамически -->
+                        </div>
+                        <button id="save-audit-btn" class="btn" style="margin-top: 20px;">Сохранить результаты</button>
+                    </div>
+                </div>
+
+                <!-- Страница форума -->
+                <div id="forum-content" class="dashboard-section" style="display: none;">
+                    <div class="content-header">
+                        <h2>Форум</h2>
+                        <button class="btn" id="create-topic-btn">Создать тему</button>
+                    </div>
+
+                    <div id="forum-topics-container" class="forum-topics">
+                        <!-- Темы форума будут загружаться динамически -->
+                    </div>
+                </div>
+
+                <!-- Страница поддержки -->
+                <div id="support-content" class="dashboard-section" style="display: none;">
+                    <h2>Поддержка</h2>
+                    
+                    <!-- Чат поддержки -->
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chat-messages">
+                            <!-- Сообщения чата будут загружаться динамически -->
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" id="chat-input" placeholder="Введите ваше сообщение...">
+                            <button class="btn" id="send-chat-btn">Отправить</button>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 40px;">История обращений</h3>
+                    <div id="support-history-container" class="forum-topics">
+                        <!-- История обращений будет загружаться динамически -->
+                    </div>
+                </div>
+
+                <!-- Страница настроек -->
+                <div id="settings-content" class="dashboard-section" style="display: none;">
+                    <h2>Настройки аккаунта</h2>
+                    <div class="audit-form">
+                        <div class="form-group">
+                            <label for="settings-username">Имя пользователя</label>
+                            <input type="text" id="settings-username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="settings-email">Email</label>
+                            <input type="email" id="settings-email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="settings-password">Новый пароль</label>
+                            <input type="password" id="settings-password" class="form-control" placeholder="Оставьте пустым, если не хотите менять">
+                        </div>
+                        <div class="form-group">
+                            <label for="settings-password-confirm">Подтверждение пароля</label>
+                            <input type="password" id="settings-password-confirm" class="form-control">
+                        </div>
+                        
+                        <!-- Настройки уведомлений -->
+                        <h3 style="margin-top: 30px;">Настройки уведомлений</h3>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="notify-audit" checked> Уведомлять о завершении аудита
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="notify-forum" checked> Уведомлять об ответах на форуме
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="notify-support" checked> Уведомлять об ответах поддержки
+                            </label>
+                        </div>
+                        
+                        <button class="btn" id="save-settings-btn">Сохранить изменения</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Панель администратора -->
+    <div id="admin-dashboard" class="dashboard" style="display: none;">
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-nav">
+                    <a href="#" class="logo">MetaGenius Admin</a>
+                    <div class="user-info">
+                        <button class="theme-toggle" id="admin-theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <div class="notification-bell" id="admin-notification-bell">
+                            <i class="far fa-bell"></i>
+                            <span class="notification-count" id="admin-notification-count">0</span>
+                            <div class="notifications-panel" id="admin-notifications-panel">
+                                <!-- Уведомления будут загружаться динамически -->
+                            </div>
+                        </div>
+                        <div class="user-avatar" id="admin-avatar">A</div>
+                        <span>Администратор</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-main">
+            <div class="sidebar">
+                <ul class="sidebar-nav">
+                    <li><a href="#" class="nav-admin-users active">Пользователи</a></li>
+                    <li><a href="#" class="nav-admin-forum">Форум</a></li>
+                    <li><a href="#" class="nav-admin-complaints">Жалобы</a></li>
+                    <li><a href="#" id="admin-logout-btn">Выйти</a></li>
+                </ul>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- Управление пользователями -->
+                <div id="admin-users-content" class="dashboard-section">
+                    <div class="content-header">
+                        <h2>Управление пользователями</h2>
+                        <div class="search-box">
+                            <input type="text" id="user-search" placeholder="Поиск по имени или email...">
+                            <button id="admin-search-btn">🔍</button>
+                        </div>
+                    </div>
+
+                    <table class="admin-table" id="users-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Имя пользователя</th>
+                                <th>Email</th>
+                                <th>Роль</th>
+                                <th>Дата регистрации</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-table-body">
+                            <!-- Пользователи будут загружаться динамически -->
+                        </tbody>
+                    </table>
+
+                    <h3 style="margin-top: 40px;">Статистика активности</h3>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h3>Всего пользователей</h3>
+                            <div class="audit-score" id="total-users">0</div>
+                        </div>
+                        <div class="project-card">
+                            <h3>Активных сегодня</h3>
+                            <div class="audit-score" id="active-today">0</div>
+                        </div>
+                        <div class="project-card">
+                            <h3>Всего аудитов</h3>
+                            <div class="audit-score" id="total-audits-admin">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Админ-форум -->
+                <div id="admin-forum-content" class="dashboard-section" style="display: none;">
+                    <div class="content-header">
+                        <h2>Модерация форума</h2>
+                        <button class="btn" id="create-announcement-btn">Создать объявление</button>
+                    </div>
+
+                    <div id="admin-forum-topics-container" class="forum-topics">
+                        <!-- Темы форума будут загружаться динамически -->
+                    </div>
+                </div>
+
+                <!-- Жалобы -->
+                <div id="admin-complaints-content" class="dashboard-section" style="display: none;">
+                    <h2>Обращения в поддержку</h2>
+
+                    <table class="admin-table" id="complaints-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Пользователь</th>
+                                <th>Тема</th>
+                                <th>Статус</th>
+                                <th>Дата</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody id="complaints-table-body">
+                            <!-- Жалобы будут загружаться динамически -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
+
+
