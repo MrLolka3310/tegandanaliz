@@ -1379,33 +1379,145 @@ document.getElementById('save-settings-btn').addEventListener('click', () => {
     }
 });
 
-// Экспорт результатов аудита
+// Экспорт результатов аудита в PDF
 document.getElementById('export-pdf-btn').addEventListener('click', () => {
     const url = document.getElementById('audit-url').value;
-    alert(`Результаты аудита для ${url} экспортированы в PDF`);
-    // В реальном приложении здесь был бы код для генерации PDF
+    const auditScore = document.querySelector('.audit-score')?.textContent || 'N/A';
+
+    // Создаем новый PDF документ
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Заголовок
+    doc.setFontSize(20);
+    doc.text('Отчет аудита сайта', 20, 30);
+
+    // URL сайта
+    doc.setFontSize(12);
+    doc.text(`URL: ${url}`, 20, 50);
+    doc.text(`Дата аудита: ${new Date().toLocaleDateString('ru-RU')}`, 20, 60);
+    doc.text(`Общий балл: ${auditScore}`, 20, 70);
+
+    // Разделители
+    doc.line(20, 75, 190, 75);
+
+    let yPosition = 85;
+
+    // Мета-теги
+    doc.setFontSize(14);
+    doc.text('Мета-теги:', 20, yPosition);
+    yPosition += 10;
+
+    const metaTags = document.querySelectorAll('.result-category')[0]?.querySelectorAll('.result-item');
+    if (metaTags) {
+        metaTags.forEach(tag => {
+            const name = tag.querySelector('span:first-child')?.textContent || '';
+            const status = tag.querySelector('.result-status')?.textContent || '';
+            doc.setFontSize(10);
+            doc.text(`${name}: ${status}`, 30, yPosition);
+            yPosition += 8;
+        });
+    }
+
+    yPosition += 10;
+
+    // Производительность
+    doc.setFontSize(14);
+    doc.text('Производительность:', 20, yPosition);
+    yPosition += 10;
+
+    const performance = document.querySelectorAll('.result-category')[1]?.querySelectorAll('.result-item');
+    if (performance) {
+        performance.forEach(item => {
+            const name = item.querySelector('span:first-child')?.textContent || '';
+            const status = item.querySelector('.result-status')?.textContent || '';
+            doc.setFontSize(10);
+            doc.text(`${name}: ${status}`, 30, yPosition);
+            yPosition += 8;
+        });
+    }
+
+    yPosition += 10;
+
+    // SEO
+    doc.setFontSize(14);
+    doc.text('SEO:', 20, yPosition);
+    yPosition += 10;
+
+    const seo = document.querySelectorAll('.result-category')[2]?.querySelectorAll('.result-item');
+    if (seo) {
+        seo.forEach(item => {
+            const name = item.querySelector('span:first-child')?.textContent || '';
+            const status = item.querySelector('.result-status')?.textContent || '';
+            doc.setFontSize(10);
+            doc.text(`${name}: ${status}`, 30, yPosition);
+            yPosition += 8;
+        });
+    }
+
+    // Сохраняем PDF
+    const filename = `audit-${url.replace(/https?:\/\//, '').replace(/[^a-zA-Z0-9]/g, '-')}-${new Date().toISOString().split('T')[0]}.pdf`;
+    doc.save(filename);
+
+    showNotification('PDF отчет успешно экспортирован!', 'success');
 });
 
+// Экспорт результатов аудита в CSV
 document.getElementById('export-csv-btn').addEventListener('click', () => {
     const url = document.getElementById('audit-url').value;
-    
+    const auditScore = document.querySelector('.audit-score')?.textContent || 'N/A';
+
     // Генерация CSV
-    let csvContent = "Категория,Показатель,Статус,Оценка\n";
-    
-    // Добавляем данные из результатов аудита
-    // Это упрощенная реализация
-    csvContent += "Общий результат,,," + document.querySelector('.audit-score').textContent + "\n";
-    
+    let csvContent = "Категория,Показатель,Статус\n";
+
+    // Общий результат
+    csvContent += `Общий результат,,${auditScore}\n`;
+
+    // Мета-теги
+    csvContent += "Мета-теги,,\n";
+    const metaTags = document.querySelectorAll('.result-category')[0]?.querySelectorAll('.result-item');
+    if (metaTags) {
+        metaTags.forEach(tag => {
+            const name = tag.querySelector('span:first-child')?.textContent || '';
+            const status = tag.querySelector('.result-status')?.textContent || '';
+            csvContent += `,${name},${status}\n`;
+        });
+    }
+
+    // Производительность
+    csvContent += "Производительность,,\n";
+    const performance = document.querySelectorAll('.result-category')[1]?.querySelectorAll('.result-item');
+    if (performance) {
+        performance.forEach(item => {
+            const name = item.querySelector('span:first-child')?.textContent || '';
+            const status = item.querySelector('.result-status')?.textContent || '';
+            csvContent += `,${name},${status}\n`;
+        });
+    }
+
+    // SEO
+    csvContent += "SEO,,\n";
+    const seo = document.querySelectorAll('.result-category')[2]?.querySelectorAll('.result-item');
+    if (seo) {
+        seo.forEach(item => {
+            const name = item.querySelector('span:first-child')?.textContent || '';
+            const status = item.querySelector('.result-status')?.textContent || '';
+            csvContent += `,${name},${status}\n`;
+        });
+    }
+
     // Создаем и скачиваем файл
-    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const urlObj = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = urlObj;
-    a.download = `audit-${url.replace(/https?:\/\//, '')}-${new Date().toISOString().split('T')[0]}.csv`;
+    a.download = `audit-${url.replace(/https?:\/\//, '').replace(/[^a-zA-Z0-9]/g, '-')}-${new Date().toISOString().split('T')[0]}.csv`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(urlObj);
+
+    showNotification('CSV файл успешно экспортирован!', 'success');
 });
 
 // Создание объявления администратором
@@ -1704,16 +1816,16 @@ function loadGroupProjects(groupId) {
     const groups = storage.getProjectGroups();
     const group = groups.find(g => g.id === groupId);
     if (!group) return;
-    
+
     const projects = storage.getProjects();
     const groupProjects = projects.filter(p => group.projectIds.includes(p.id));
     const container = document.getElementById(`group-projects-${groupId}`);
-    
+
     if (groupProjects.length === 0) {
         container.innerHTML = '<p>В этой группе пока нет проектов</p>';
         return;
     }
-    
+
     container.innerHTML = '';
     groupProjects.forEach(project => {
         const projectElement = document.createElement('div');
@@ -1724,6 +1836,8 @@ function loadGroupProjects(groupId) {
             </div>
             <p>${project.url}</p>
         `;
+        // Добавляем обработчик клика для открытия статистики проекта
+        projectElement.addEventListener('click', () => showProjectStats(project.id));
         container.appendChild(projectElement);
     });
 }
