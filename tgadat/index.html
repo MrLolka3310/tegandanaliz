@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MetaGenius - Генератор мета-тегов и аудит страниц</title>
+    <title>MetaGenius - AI-платформа для SEO-оптимизации и анализа веб-сайтов</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Главная страница -->
@@ -13,50 +16,229 @@
         <header>
             <div class="container">
                 <nav class="navbar">
-                    <a href="#" class="logo">MetaGenius</a>
+                    <a href="#" class="logo">
+                        <i class="fas fa-chart-line"></i>
+                        MetaGenius
+                    </a>
                     <ul class="nav-links">
-                        <li><a href="#features">Возможности</a></li>
-                        <li><a href="#example">Пример</a></li>
+                        <li><a href="#features">Функции</a></li>
+                        <li><a href="#benefits">Преимущества</a></li>
+                        <li><a href="#example">Результаты</a></li>
                         <li><a href="#" id="login-btn" class="btn btn-outline">Войти</a></li>
                     </ul>
+                    <div class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </nav>
             </div>
+            <div class="nav-overlay"></div>
         </header>
 
         <section class="hero">
             <div class="container">
-                <h1>Улучшите SEO вашего сайта</h1>
-                <p>MetaGenius - это мощный инструмент для генерации мета-тегов и проведения аудита веб-страниц. Повысьте видимость вашего сайта в поисковых системах.</p>
-                <a href="#" id="get-started-btn" class="btn">Начать сейчас</a>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Профессиональный SEO-анализ и оптимизация сайтов</h1>
+                        <p class="hero-description">MetaGenius — это интеллектуальная платформа для комплексного аудита веб-сайтов, генерации мета-тегов и повышения видимости в поисковых системах. Используйте передовые технологии для роста вашего онлайн-бизнеса.</p>
+                        <div class="hero-actions">
+                            <a href="#" id="get-started-btn" class="btn btn-primary">Начать анализ</a>
+                            <a href="#features" class="btn btn-secondary">Узнать больше</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <div class="stat-value">15,000+</div>
+                                <div class="stat-label">проведенных аудитов</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">94%</div>
+                                <div class="stat-label">клиентов улучшили позиции</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">4.9/5</div>
+                                <div class="stat-label">рейтинг доверия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="dashboard-preview">
+                            <div class="browser-window">
+                                <div class="browser-controls">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="browser-content">
+                                    <div class="metric-grid">
+                                        <div class="metric-card">
+                                            <div class="metric-icon">
+                                                <i class="fas fa-search"></i>
+                                            </div>
+                                            <div class="metric-value">87/100</div>
+                                            <div class="metric-label">SEO-оценка</div>
+                                        </div>
+                                        <div class="metric-card">
+                                            <div class="metric-icon">
+                                                <i class="fas fa-bolt"></i>
+                                            </div>
+                                            <div class="metric-value">0.9с</div>
+                                            <div class="metric-label">Скорость загрузки</div>
+                                        </div>
+                                        <div class="metric-card">
+                                            <div class="metric-icon">
+                                                <i class="fas fa-mobile-alt"></i>
+                                            </div>
+                                            <div class="metric-value">100%</div>
+                                            <div class="metric-label">Мобильная адаптация</div>
+                                        </div>
+                                        <div class="metric-card">
+                                            <div class="metric-icon">
+                                                <i class="fas fa-shield-alt"></i>
+                                            </div>
+                                            <div class="metric-value">Безопасно</div>
+                                            <div class="metric-label">SSL-сертификат</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
             </div>
         </section>
 
         <section id="features" class="features">
             <div class="container">
-                <div class="section-title">
-                    <h2>Наши возможности</h2>
-                    <p>MetaGenius предлагает полный набор инструментов для оптимизации вашего сайта</p>
+                <div class="section-header">
+                    <span class="section-subtitle">Возможности платформы</span>
+                    <h2 class="section-title">Комплексный подход к SEO-оптимизации</h2>
+                    <p class="section-description">MetaGenius предоставляет полный набор инструментов для анализа, оптимизации и мониторинга вашего веб-сайта</p>
                 </div>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon">🔍</div>
-                        <h3>Аудит страниц</h3>
-                        <p>Полный анализ вашего сайта на соответствие SEO-требованиям. Выявление проблем и рекомендации по их устранению.</p>
+                        <div class="feature-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <h3>Глубокий технический аудит</h3>
+                        <p>Полный анализ сайта на соответствие современным SEO-требованиям с выявлением проблем и персональными рекомендациями по их устранению.</p>
+                        <ul class="feature-list">
+                            <li>Анализ структуры сайта</li>
+                            <li>Проверка индексации страниц</li>
+                            <li>Оценка скорости загрузки</li>
+                            <li>Анализ внутренней перелинковки</li>
+                        </ul>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">⚙️</div>
-                        <h3>Генерация мета-тегов</h3>
-                        <p>Автоматическое создание оптимизированных мета-тегов для повышения рейтинга в поисковых системах.</p>
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Умная генерация мета-тегов</h3>
+                        <p>Автоматическое создание оптимизированных мета-тегов с учетом семантического ядра и поведенческих факторов для повышения рейтинга в поисковых системах.</p>
+                        <ul class="feature-list">
+                            <li>Title и Description</li>
+                            <li>Open Graph разметка</li>
+                            <li>Twitter Cards</li>
+                            <li>Структурированные данные</li>
+                        </ul>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h3>Детальная аналитика</h3>
-                        <p>Подробные отчеты о производительности вашего сайта с визуализацией данных и рекомендациями.</p>
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Детальная аналитика и отчеты</h3>
+                        <p>Подробные отчеты о производительности вашего сайта с визуализацией данных, трендами и персональными рекомендациями по улучшению.</p>
+                        <ul class="feature-list">
+                            <li>Визуализация ключевых метрик</li>
+                            <li>Сравнение с конкурентами</li>
+                            <li>Динамика изменений</li>
+                            <li>Экспорт в PDF/CSV</li>
+                        </ul>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">👥</div>
-                        <h3>Совместная работа</h3>
-                        <p>Работайте над проектами вместе с командой, делитесь результатами и обсуждайте улучшения.</p>
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Командная работа и коллаборация</h3>
+                        <p>Работайте над проектами вместе с командой, делитесь результатами, обсуждайте улучшения и назначайте задачи для эффективной совместной работы.</p>
+                        <ul class="feature-list">
+                            <li>Управление правами доступа</li>
+                            <li>Комментарии и обсуждения</li>
+                            <li>История изменений</li>
+                            <li>Уведомления о событиях</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="benefits">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Наши преимущества</span>
+                    <h2 class="section-title">Почему выбирают MetaGenius</h2>
+                </div>
+                <div class="benefits-content">
+                    <div class="benefits-text">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>AI-анализ и рекомендации</h3>
+                                <p>Наша система использует машинное обучение для анализа тысяч факторов и предоставления персонализированных рекомендаций по улучшению SEO.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Экономия времени</h3>
+                                <p>Автоматизируйте рутинные задачи SEO-оптимизации и сосредоточьтесь на стратегическом развитии вашего онлайн-присутствия.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Измеримые результаты</h3>
+                                <p>Отслеживайте прогресс с помощью детальной аналитики и наглядных отчетов, которые показывают реальное влияние оптимизации на позиции сайта.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Безопасность данных</h3>
+                                <p>Мы обеспечиваем полную конфиденциальность ваших данных с использованием современных технологий шифрования и защиты.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits-visual">
+                        <div class="benefits-image">
+                            <div class="floating-card card-1">
+                                <i class="fas fa-trophy"></i>
+                                <span>Лучшие практики SEO</span>
+                            </div>
+                            <div class="floating-card card-2">
+                                <i class="fas fa-rocket"></i>
+                                <span>Быстрая оптимизация</span>
+                            </div>
+                            <div class="floating-card card-3">
+                                <i class="fas fa-award"></i>
+                                <span>Профессиональный подход</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,39 +246,88 @@
 
         <section id="example" class="example">
             <div class="container">
-                <div class="section-title">
-                    <h2>Пример отчета аудита</h2>
-                    <p>Посмотрите, как выглядит детальный анализ вашего сайта</p>
+                <div class="section-header">
+                    <span class="section-subtitle">Пример отчета</span>
+                    <h2 class="section-title">Детальный анализ вашего сайта</h2>
+                    <p class="section-description">Посмотрите, как выглядит комплексный отчет после аудита вашего веб-сайта</p>
                 </div>
                 <div class="example-content">
                     <div class="example-text">
-                        <h3>Что вы получите после аудита</h3>
+                        <h3>Что включает в себя отчет аудита</h3>
                         <p>Наш инструмент проводит комплексный анализ вашего сайта и предоставляет детальный отчет, включающий:</p>
-                        <ul>
-                            <li>Оценку SEO-оптимизации</li>
-                            <li>Анализ мета-тегов и структуры страницы</li>
-                            <li>Проверку скорости загрузки</li>
-                            <li>Рекомендации по улучшению</li>
-                            <li>Сравнение с конкурентами</li>
+                        <ul class="checklist">
+                            <li><i class="fas fa-check"></i> Оценку SEO-оптимизации по 100-балльной шкале</li>
+                            <li><i class="fas fa-check"></i> Анализ мета-тегов и структуры страницы</li>
+                            <li><i class="fas fa-check"></i> Проверку скорости загрузки и производительности</li>
+                            <li><i class="fas fa-check"></i> Рекомендации по улучшению с приоритетами</li>
+                            <li><i class="fas fa-check"></i> Сравнение с основными конкурентами</li>
+                            <li><i class="fas fa-check"></i> Анализ мобильной адаптации</li>
                         </ul>
-                        <p>Все результаты сохраняются в вашем аккаунте для последующего отслеживания прогресса.</p>
+                        <p>Все результаты сохраняются в вашем аккаунте для последующего отслеживания прогресса и динамики изменений.</p>
                     </div>
                     <div class="example-visual">
-                        <h3>Отчет аудита для example.com</h3>
-                        <div class="audit-score">82/100</div>
-                        <div class="result-category">
-                            <h4>Мета-теги</h4>
-                            <div class="result-item">
-                                <span>Title тег</span>
-                                <span class="result-status status-success">Оптимизирован</span>
+                        <div class="report-card">
+                            <div class="report-header">
+                                <h3>Отчет аудита для example.com</h3>
+                                <div class="report-date">Обновлено: 15.11.2023</div>
                             </div>
-                            <div class="result-item">
-                                <span>Meta description</span>
-                                <span class="result-status status-warning">Требует улучшения</span>
+                            <div class="overall-score">
+                                <div class="score-circle">
+                                    <div class="score-value">82/100</div>
+                                    <div class="score-label">Общий балл</div>
+                                </div>
+                                <div class="score-details">
+                                    <div class="score-category">
+                                        <span>SEO</span>
+                                        <div class="score-bar">
+                                            <div class="score-progress" style="width: 85%"></div>
+                                        </div>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="score-category">
+                                        <span>Производительность</span>
+                                        <div class="score-bar">
+                                            <div class="score-progress" style="width: 78%"></div>
+                                        </div>
+                                        <span>78%</span>
+                                    </div>
+                                    <div class="score-category">
+                                        <span>Безопасность</span>
+                                        <div class="score-bar">
+                                            <div class="score-progress" style="width: 92%"></div>
+                                        </div>
+                                        <span>92%</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="result-item">
-                                <span>Open Graph теги</span>
-                                <span class="result-status status-error">Отсутствуют</span>
+                            <div class="result-category">
+                                <h4>Мета-теги</h4>
+                                <div class="result-item">
+                                    <span>Title тег</span>
+                                    <div class="result-status">
+                                        <span class="status-badge status-success">Оптимизирован</span>
+                                    </div>
+                                </div>
+                                <div class="result-item">
+                                    <span>Meta description</span>
+                                    <div class="result-status">
+                                        <span class="status-badge status-warning">Требует улучшения</span>
+                                    </div>
+                                </div>
+                                <div class="result-item">
+                                    <span>Open Graph теги</span>
+                                    <div class="result-status">
+                                        <span class="status-badge status-error">Отсутствуют</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="report-actions">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-download"></i> Скачать PDF
+                                </button>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-chart-line"></i> Детальная статистика
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -108,29 +339,52 @@
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-column">
-                        <h3>MetaGenius</h3>
-                        <p>Улучшите видимость вашего сайта в поисковых системах с помощью нашего комплексного инструмента для SEO-аудита и генерации мета-тегов.</p>
+                        <div class="footer-logo">
+                            <i class="fas fa-chart-line"></i>
+                            MetaGenius
+                        </div>
+                        <p class="footer-description">Профессиональная платформа для SEO-анализа и оптимизации веб-сайтов. Повышаем видимость и конверсию с 2020 года.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                     <div class="footer-column">
-                        <h3>Навигация</h3>
+                        <h3>Продукт</h3>
                         <ul class="footer-links">
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#features">Возможности</a></li>
-                            <li><a href="#example">Пример</a></li>
-                            <li><a href="#">Цены</a></li>
+                            <li><a href="#features">Функции</a></li>
+                            <li><a href="#example">Примеры отчетов</a></li>
+                            <li><a href="#">Тарифы</a></li>
+                            <li><a href="#">Частые вопросы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Компания</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Карьера</a></li>
+                            <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h3>Поддержка</h3>
                         <ul class="footer-links">
                             <li><a href="#">Помощь</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Документация</a></li>
                             <li><a href="#">Сообщить о проблеме</a></li>
+                            <li><a href="#">Статус системы</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="copyright">
                     <p>&copy; 2023 MetaGenius. Все права защищены.</p>
+                    <div class="footer-legal">
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Условия использования</a>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -146,13 +400,19 @@
             <form id="login-form">
                 <div class="form-group">
                     <label for="login-email">Email</label>
-                    <input type="email" id="login-email" class="form-control" required>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="login-email" class="form-control" placeholder="Ваш email" required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="login-password">Пароль</label>
-                    <input type="password" id="login-password" class="form-control" required>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="login-password" class="form-control" placeholder="Ваш пароль" required>
+                    </div>
                 </div>
-                <button type="submit" class="btn" style="width: 100%;">Войти</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Войти</button>
             </form>
             <div class="auth-switch">
                 <p>Нет аккаунта? <a id="switch-to-register">Зарегистрироваться</a></p>
@@ -170,17 +430,26 @@
             <form id="register-form">
                 <div class="form-group">
                     <label for="register-username">Имя пользователя</label>
-                    <input type="text" id="register-username" class="form-control" required>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="register-username" class="form-control" placeholder="Ваше имя" required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="register-email">Email</label>
-                    <input type="email" id="register-email" class="form-control" required>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="register-email" class="form-control" placeholder="Ваш email" required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="register-password">Пароль</label>
-                    <input type="password" id="register-password" class="form-control" required>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="register-password" class="form-control" placeholder="Придумайте пароль" required>
+                    </div>
                 </div>
-                <button type="submit" class="btn" style="width: 100%;">Зарегистрироваться</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Зарегистрироваться</button>
             </form>
             <div class="auth-switch">
                 <p>Уже есть аккаунт? <a id="switch-to-login">Войти</a></p>
@@ -188,6 +457,7 @@
         </div>
     </div>
 
+    <!-- Остальные модальные окна и панели -->
     <!-- Модальное окно создания группы -->
     <div id="create-group-modal" class="modal">
         <div class="modal-content">
@@ -204,7 +474,7 @@
                     <label for="group-description">Описание группы (необязательно)</label>
                     <textarea id="group-description" class="form-control"></textarea>
                 </div>
-                <button type="submit" class="btn">Создать группу</button>
+                <button type="submit" class="btn btn-primary">Создать группу</button>
             </form>
         </div>
     </div>
@@ -225,12 +495,12 @@
                     <label for="topic-content">Содержание темы</label>
                     <textarea id="topic-content" class="form-control" required></textarea>
                 </div>
-                <button type="submit" class="btn">Создать тему</button>
+                <button type="submit" class="btn btn-primary">Создать тему</button>
             </form>
         </div>
     </div>
 
-    <!-- Модальное окно статистики проекта -->
+<!-- Модальное окно статистики проекта -->
     <div id="project-stats-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -266,11 +536,6 @@
                         
                         <div class="user-avatar" id="user-avatar">U</div>
                         <span id="username-display">Пользователь</span>
-                        <!-- Рейтинг пользователя -->
-                        <div class="user-rating">
-                            <span class="rating-stars">★★★★★</span>
-                            <span id="user-rating-value">5.0</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -317,11 +582,6 @@
                             <div class="stat-value" id="avg-score">0</div>
                             <p>По всем проектам</p>
                         </div>
-                        <div class="stat-card">
-                            <h3>Рейтинг</h3>
-                            <div class="stat-value" id="user-rank">0</div>
-                            <p>Среди пользователей</p>
-                        </div>
                     </div>
 
                     <!-- Группы проектов -->
@@ -340,6 +600,8 @@
                         <!-- Проекты будут загружаться динамически -->
                     </div>
                 </div>
+
+                <!-- Страница генерации тегов -->
                 <div id="tags-content" class="dashboard-section" style="display: none;">
                     <h2>Генератор мета-тегов</h2>
                     <p>Заполните форму для создания оптимизированных мета-тегов для вашего сайта.</p>
@@ -395,8 +657,6 @@
                         </div>
                     </div>
                 </div>
-
-
 
                 <!-- Страница аудита -->
                 <div id="audit-content" class="dashboard-section" style="display: none;">
@@ -640,11 +900,8 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
